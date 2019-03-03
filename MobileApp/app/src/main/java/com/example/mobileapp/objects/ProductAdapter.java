@@ -1,4 +1,4 @@
-package com.example.mobileapp;
+package com.example.mobileapp.objects;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.example.mobileapp.R;
 
 import java.util.List;
 

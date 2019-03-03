@@ -1,4 +1,4 @@
-package com.example.mobileapp;
+package com.example.mobileapp.objects;
 
 public class Product {
 
