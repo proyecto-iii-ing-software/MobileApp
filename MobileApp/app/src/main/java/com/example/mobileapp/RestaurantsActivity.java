@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mobileapp.objects.Product;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +28,8 @@ public class RestaurantsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        TextView toHotels = (TextView) findViewById(R.id.linkPlaces);
+        //Redirect to hotels category
+        TextView toHotels = (TextView) findViewById(R.id.linkHotels);
         toHotels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +38,7 @@ public class RestaurantsActivity extends Activity {
             }
         });
 
+        //Redirect to places category
         TextView toPlaces = (TextView) findViewById(R.id.linkPlaces);
         toPlaces.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +64,7 @@ public class RestaurantsActivity extends Activity {
         backLodging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RestaurantsActivity.this, LodgingActivity.class);
+                Intent intent = new Intent(RestaurantsActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

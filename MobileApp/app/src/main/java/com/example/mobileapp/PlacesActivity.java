@@ -9,6 +9,9 @@ import android.widget.TextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.mobileapp.objects.Product;
+import com.example.mobileapp.objects.ProductAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class PlacesActivity extends AppCompatActivity {
             }
         });
 
+        //Redirect to hotels activity
         TextView toHotels = (TextView) findViewById(R.id.linkHotels);
         toHotels.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +99,7 @@ public class PlacesActivity extends AppCompatActivity {
         backLodging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PlacesActivity.this, LodgingActivity.class);
+                Intent intent = new Intent(PlacesActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
