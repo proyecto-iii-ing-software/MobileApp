@@ -3,15 +3,15 @@ package com.example.mobileapp.objects;
 public class Product {
 
     private int id;
-    private String business;
-    private String location;
+    private String site;
+    private String distance;
     private double rating;
     private int image;
 
-    public Product(int id, String business, String location, double v, double rating, int image) {
+    public Product(int id, String business, String location, double rating, int image) {
         this.id = id;
-        this.business = business;
-        this.location = location;
+        this.site = business;
+        this.distance = location;
         this.rating = rating;
         this.image = image;
     }
@@ -21,11 +21,11 @@ public class Product {
     }
 
     public String getBusiness() {
-        return business;
+        return site;
     }
 
     public String getLocation() {
-        return location;
+        return distance;
     }
 
     public double getRating() {

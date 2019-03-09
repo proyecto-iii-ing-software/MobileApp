@@ -42,9 +42,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         Product product = productList.get(position);
 
         //binding the data with the viewholder views
-        holder.textViewBusiness.setText(product.getBusiness());
-        holder.textViewLocation.setText(product.getLocation());
-    //    holder.ratingBar.set setText(String.valueOf(product.getRating()));
+        holder.textViewSiteName.setText(product.getBusiness());
+        holder.textViewDistance.setText(product.getLocation());
+        holder.textViewRate.setText(product.getRating());
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
     }
@@ -58,16 +58,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewBusiness, textViewLocation;
-        RatingBar ratingBar;
+        TextView textViewSiteName, textViewDistance, textViewRate;
         ImageView imageView;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-            textViewBusiness = itemView.findViewById(R.id.businessName);
-            textViewLocation = itemView.findViewById(R.id.locationName);
-            ratingBar = itemView.findViewById(R.id.ratingBar);
+            textViewSiteName = itemView.findViewById(R.id.siteName);
+            textViewDistance = itemView.findViewById(R.id.distanceData);
+            textViewRate = itemView.findViewsWithText(R.id.rateAverage);
             imageView = itemView.findViewById(R.id.imageView);
         }
     }
