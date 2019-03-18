@@ -1,0 +1,8 @@
+<resources>
+    <string name="google_api_key">AIzaSyDk3e17CKbbv3L6iHcxrCVxc0BmfYRRMIg</string>
+    <string name="app_name">MobileApp</string>
+    <string name="restaurants">RESTAURANTS</string>
+    <string name="hotels">HOTELS</string>
+    <string name="places">PLACES</string>
+    <string name="rigth_arrow">\u2192</string>
+</resources>
