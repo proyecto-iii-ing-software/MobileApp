@@ -66,7 +66,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
             textViewSiteName = itemView.findViewById(R.id.siteName);
             textViewDistance = itemView.findViewById(R.id.distanceData);
-            textViewRate = itemView.findViewsWithText(R.id.rateAverage);
+            textViewRate = itemView.findViewById(R.id.rateAverage);
             imageView = itemView.findViewById(R.id.imageView);
         }
     }
