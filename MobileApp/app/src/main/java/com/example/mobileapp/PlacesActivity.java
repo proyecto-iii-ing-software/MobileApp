@@ -3,7 +3,6 @@ package com.example.mobileapp;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import com.example.mobileapp.objects.Product;
 import com.example.mobileapp.objects.ProductAdapter;
 
@@ -15,10 +14,10 @@ public class PlacesActivity extends Menu {
 
 
     //a list to store all the products
-    List<Product> productList;
+    List<Product> productList1;
 
     //the recyclerview
-    RecyclerView recyclerView;
+    RecyclerView recyclerView, recyclerView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +25,18 @@ public class PlacesActivity extends Menu {
         setContentView(R.layout.activity_places);
 
         //getting the recyclerview from xml
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(layoutManager);
 
         //initializing the productlist
-        productList = new ArrayList<>();
+        productList1 = new ArrayList<>();
 
 
         //adding some items to our list
-        productList.add(
+        productList1.add(
                 new Product(
                         1,
                         "Rafting BBB",
@@ -43,7 +44,7 @@ public class PlacesActivity extends Menu {
                         4.5,
                         R.drawable.rafting));
 
-        productList.add(
+        productList1.add(
                 new Product(
                         2,
                         "Arenal Tour",
@@ -51,7 +52,7 @@ public class PlacesActivity extends Menu {
                         4.3,
                         R.drawable.arenal_tour));
 
-        productList.add(
+        productList1.add(
                 new Product(
                         3,
                         "Surf Jaco",
@@ -60,10 +61,20 @@ public class PlacesActivity extends Menu {
                         R.drawable.suf_jaco));
 
         //creating recyclerview adapter
-        ProductAdapter adapter = new ProductAdapter(this, productList);
+        ProductAdapter adapter = new ProductAdapter(this, productList1);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
+
+        //second recycler test
+        LinearLayoutManager layoutManager2
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView2 = (RecyclerView) findViewById(R.id.recyclerView2);
+        recyclerView2.setHasFixedSize(true);
+        recyclerView2.setLayoutManager(layoutManager2);
+
+
+        recyclerView2.setAdapter(adapter);
 
     }
 

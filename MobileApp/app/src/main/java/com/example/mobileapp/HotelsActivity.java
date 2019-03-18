@@ -28,9 +28,11 @@ public class HotelsActivity extends Menu {
 
 
         //getting the recyclerview from xml
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView1);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(layoutManager);
 
         //initializing the productlist
         productList = new ArrayList<>();
