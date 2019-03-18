@@ -44,7 +44,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         //binding the data with the viewholder views
         holder.textViewSiteName.setText(product.getBusiness());
         holder.textViewDistance.setText(product.getLocation());
-        holder.textViewRate.setText(product.getRating());
+        holder.textViewRate.setText(String.valueOf(product.getRating()));
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
     }
