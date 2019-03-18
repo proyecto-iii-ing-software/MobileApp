@@ -8,7 +8,7 @@ public class Product {
     private double rating;
     private int image;
 
-    public Product(int id, String business, String location, double rating, int image) {
+    public Product(int id, String business, String location, double v, double rating, int image) {
         this.id = id;
         this.site = business;
         this.distance = location;
