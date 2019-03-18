@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends Menu {
 
     private static final String TAG = "MainActivity";
     private static final int ERROR_DIALOG_REQUEST = 9001;
@@ -27,7 +27,6 @@ public class HomeActivity extends AppCompatActivity {
         if(isServicesOK()){
             init();
         }
-
 
 
         final Button menuButton;
@@ -69,14 +68,7 @@ public class HomeActivity extends AppCompatActivity {
 
     //here the button for the map gets its function
     private void init(){
-        Button btnMap =  findViewById(R.id.btnMap);
-        btnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MapActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     //method that checks if the map is going to work as expected

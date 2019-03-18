@@ -1,8 +1,11 @@
 <resources>
     <string name="google_api_key">AIzaSyDk3e17CKbbv3L6iHcxrCVxc0BmfYRRMIg</string>
-    <string name="app_name">MobileApp</string>
-    <string name="restaurants">RESTAURANTS</string>
-    <string name="hotels">HOTELS</string>
-    <string name="places">PLACES</string>
+    <string name="app_name">Ticoplaces</string>
+    <string name="restaurants">Where to eat?</string>
+    <string name="hotels">Where to stay?</string>
+    <string name="places">Where to go?</string>
+    <string name="home_menu">Home</string>
+    <string name="search_action">Search</string>
+    <string name="settings_action">Settings</string>
     <string name="rigth_arrow">\u2192</string>
 </resources>

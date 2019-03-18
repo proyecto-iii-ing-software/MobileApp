@@ -12,7 +12,10 @@
         app:cardBackgroundColor="#373953"
         app:cardCornerRadius="6dp"
         app:cardElevation="1dp"
-        app:cardMaxElevation="2dp">
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,7 +26,8 @@
                 android:layout_width="185dp"
                 android:layout_height="110dp"
                 android:layout_centerHorizontal="true"
-                android:contentDescription="TODO" />
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/siteName"
@@ -42,8 +46,8 @@
             <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/siteName"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
                 android:shrinkColumns="*">

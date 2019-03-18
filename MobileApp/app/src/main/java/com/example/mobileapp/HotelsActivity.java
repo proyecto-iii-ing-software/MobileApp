@@ -13,7 +13,7 @@ import com.example.mobileapp.objects.ProductAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HotelsActivity extends Activity {
+public class HotelsActivity extends Menu {
 
     //a list to store all the products
     List<Product> productList;
@@ -26,25 +26,6 @@ public class HotelsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places);
 
-        //Redirect to restaurants category
-        TextView toRestaurants = (TextView) findViewById(R.id.linkRestaurants);
-        toRestaurants.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HotelsActivity.this,RestaurantsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //Redirect to places category
-        TextView toPlaces = (TextView) findViewById(R.id.linkPlaces);
-        toPlaces.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HotelsActivity.this,PlacesActivity.class);
-                startActivity(intent);
-            }
-        });
 
         //getting the recyclerview from xml
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -60,27 +41,24 @@ public class HotelsActivity extends Activity {
                 new Product(
                         1,
                         "Double tree resort",
-                        "Puerto viejo",
+                        "3mi",
                         4.3,
-                        60000,
                         R.drawable.doubletree));
 
         productList.add(
                 new Product(
                         1,
                         "Camping Charrarra",
-                        "Guanacaste",
-                        4.3,
-                        60000,
+                        "3mi",
+                        5,
                         R.drawable.campingcharrarra));
 
         productList.add(
                 new Product(
                         1,
                         "Motel TT",
-                        "Jaco",
+                        "3mi",
                         4.3,
-                        60000,
                         R.drawable.motelcr));
 
         //creating recyclerview adapter
@@ -89,17 +67,5 @@ public class HotelsActivity extends Activity {
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
 
-        //Return Button
-        final Button backLodging;
-        backLodging = (Button) findViewById(R.id.buttonBackLodging);
-
-        //Listener for going back to home
-        backLodging.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HotelsActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
